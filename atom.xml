@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>henji</title>
+  
+  <subtitle>Welcome to my blog</subtitle>
+  <link href="http://henji-guo.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://henji-guo.github.io/"/>
+  <updated>2020-08-31T02:46:44.964Z</updated>
+  <id>http://henji-guo.github.io/</id>
+  
+  <author>
+    <name>henji</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ThreadX(二) ------ 移植STM32[Keil]</title>
+    <link href="http://henji-guo.github.io/2020/08/30/threadx-er-yi-zhi-dao-stm32-keil/"/>
+    <id>http://henji-guo.github.io/2020/08/30/threadx-er-yi-zhi-dao-stm32-keil/</id>
+    <published>2020-08-30T02:04:56.000Z</published>
+    <updated>2020-08-31T02:46:44.964Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;裸机项目（Keil）&quot;&gt;&lt;a href=&quot;#裸机项目（Keil）&quot; class=&quot;headerlink&quot; title=&quot;裸机项目（Keil）&quot;&gt;&lt;/a&gt;裸机项目（Keil）&lt;/h2&gt;&lt;p&gt;确保裸机项目没问题&lt;br&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/categories/ThreadX/"/>
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/tags/ThreadX/"/>
+    
+    <category term="STM32" scheme="http://henji-guo.github.io/tags/STM32/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ThreadX(十)---定时器TIME</title>
+    <link href="http://henji-guo.github.io/2020/08/28/threadx-shi-ding-shi-qi-time/"/>
+    <id>http://henji-guo.github.io/2020/08/28/threadx-shi-ding-shi-qi-time/</id>
+    <published>2020-08-28T14:07:21.000Z</published>
+    <updated>2020-08-28T14:36:09.772Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;API&quot;&gt;&lt;a href=&quot;#API&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/categories/ThreadX/"/>
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/tags/ThreadX/"/>
+    
+    <category term="STM32" scheme="http://henji-guo.github.io/tags/STM32/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ThreadX(九)---消息队列Queue</title>
+    <link href="http://henji-guo.github.io/2020/08/28/threadx-jiu-xiao-xi-dui-lie-queue/"/>
+    <id>http://henji-guo.github.io/2020/08/28/threadx-jiu-xiao-xi-dui-lie-queue/</id>
+    <published>2020-08-28T14:06:22.000Z</published>
+    <updated>2020-08-28T14:37:53.330Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;API&quot;&gt;&lt;a href=&quot;#API&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/categories/ThreadX/"/>
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/tags/ThreadX/"/>
+    
+    <category term="STM32" scheme="http://henji-guo.github.io/tags/STM32/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ThreadX(八)---事件集Event</title>
+    <link href="http://henji-guo.github.io/2020/08/28/threadx-ba-shi-jian-ji-event/"/>
+    <id>http://henji-guo.github.io/2020/08/28/threadx-ba-shi-jian-ji-event/</id>
+    <published>2020-08-28T14:04:56.000Z</published>
+    <updated>2020-08-28T14:36:42.649Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;API&quot;&gt;&lt;a href=&quot;#API&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/categories/ThreadX/"/>
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/tags/ThreadX/"/>
+    
+    <category term="STM32" scheme="http://henji-guo.github.io/tags/STM32/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ThreadX(七)---互斥量Mutex</title>
+    <link href="http://henji-guo.github.io/2020/08/28/threadx-qi-hu-chi-liang-mutex/"/>
+    <id>http://henji-guo.github.io/2020/08/28/threadx-qi-hu-chi-liang-mutex/</id>
+    <published>2020-08-28T14:02:29.000Z</published>
+    <updated>2020-08-28T14:36:55.574Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;除了信号量外，ThreadX还提供了一个互斥对象。 互斥锁基本上是二进制信号量，这意味着一次只有一个线程可以拥有一个互斥锁。</summary>
+        
+      
+    
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/categories/ThreadX/"/>
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/tags/ThreadX/"/>
+    
+    <category term="STM32" scheme="http://henji-guo.github.io/tags/STM32/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ThreadX(六) ------ 信号量semaphore</title>
+    <link href="http://henji-guo.github.io/2020/08/26/threadx-liu-xin-hao-liang-semaphore/"/>
+    <id>http://henji-guo.github.io/2020/08/26/threadx-liu-xin-hao-liang-semaphore/</id>
+    <published>2020-08-26T12:06:46.000Z</published>
+    <updated>2020-08-28T14:27:04.709Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;ThreadX提供32位计数信号量，范围在0到4,294,967,295之间。</summary>
+        
+      
+    
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/categories/ThreadX/"/>
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/tags/ThreadX/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ThreadX &amp; STM32</title>
+    <link href="http://henji-guo.github.io/2020/08/26/threadx-stm32/"/>
+    <id>http://henji-guo.github.io/2020/08/26/threadx-stm32/</id>
+    <published>2020-08-26T10:25:36.000Z</published>
+    <updated>2020-08-31T02:47:55.398Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;/2020/07/29/stm32cubeide-shi-yong-openocd-debug/&quot;&gt;STM32CubeIDE 使用OpenOCD debug&lt;/a&gt;&lt;br&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/categories/ThreadX/"/>
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/tags/ThreadX/"/>
+    
+    <category term="STM32" scheme="http://henji-guo.github.io/tags/STM32/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ThreadX(五)------内存管理</title>
+    <link href="http://henji-guo.github.io/2020/08/26/threadx-wu-nei-cun-memory/"/>
+    <id>http://henji-guo.github.io/2020/08/26/threadx-wu-nei-cun-memory/</id>
+    <published>2020-08-26T10:06:46.000Z</published>
+    <updated>2020-08-28T14:27:45.107Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;API&quot;&gt;&lt;a href=&quot;#API&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/categories/ThreadX/"/>
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/tags/ThreadX/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ThreadX(四)------TraceX使用</title>
+    <link href="http://henji-guo.github.io/2020/08/22/threadx-si-tracex-shi-yong/"/>
+    <id>http://henji-guo.github.io/2020/08/22/threadx-si-tracex-shi-yong/</id>
+    <published>2020-08-22T02:06:46.000Z</published>
+    <updated>2020-08-28T14:27:58.931Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;Azure RTOS</summary>
+        
+      
+    
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/categories/ThreadX/"/>
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/tags/ThreadX/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ThreadX(三) ------ 线程thread</title>
+    <link href="http://henji-guo.github.io/2020/08/14/threadx-san-xian-cheng-thread/"/>
+    <id>http://henji-guo.github.io/2020/08/14/threadx-san-xian-cheng-thread/</id>
+    <published>2020-08-14T05:48:25.000Z</published>
+    <updated>2020-08-28T14:26:25.250Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;常用API&quot;&gt;&lt;a href=&quot;#常用API&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/categories/ThreadX/"/>
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/tags/ThreadX/"/>
+    
+    <category term="STM32" scheme="http://henji-guo.github.io/tags/STM32/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ThreadX(二) ------ 移植到STM32</title>
+    <link href="http://henji-guo.github.io/2020/08/13/threadx-er-yi-zhi-dao-stm32/"/>
+    <id>http://henji-guo.github.io/2020/08/13/threadx-er-yi-zhi-dao-stm32/</id>
+    <published>2020-08-13T12:54:11.000Z</published>
+    <updated>2020-08-28T14:25:54.787Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;新建裸机项目&quot;&gt;&lt;a href=&quot;#新建裸机项目&quot; class=&quot;headerlink&quot; title=&quot;新建裸机项目&quot;&gt;&lt;/a&gt;新建裸机项目&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;目录结构&lt;br&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/categories/ThreadX/"/>
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/tags/ThreadX/"/>
+    
+    <category term="STM32" scheme="http://henji-guo.github.io/tags/STM32/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>STM32CubeIDE &amp; OpenOCD</title>
+    <link href="http://henji-guo.github.io/2020/07/29/stm32cubeide-shi-yong-openocd-debug/"/>
+    <id>http://henji-guo.github.io/2020/07/29/stm32cubeide-shi-yong-openocd-debug/</id>
+    <published>2020-07-29T05:48:25.000Z</published>
+    <updated>2020-08-28T14:30:11.396Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;针对手头的正点原子潘多拉(Pandora</summary>
+        
+      
+    
+    
+    
+    <category term="STM32" scheme="http://henji-guo.github.io/categories/STM32/"/>
+    
+    
+    <category term="STM32CubeIDE" scheme="http://henji-guo.github.io/tags/STM32CubeIDE/"/>
+    
+    <category term="OpenOCD" scheme="http://henji-guo.github.io/tags/OpenOCD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ThreadX(一) ------ 初识</title>
+    <link href="http://henji-guo.github.io/2020/07/28/threadx-yi-chu-shi/"/>
+    <id>http://henji-guo.github.io/2020/07/28/threadx-yi-chu-shi/</id>
+    <published>2020-07-28T14:04:56.000Z</published>
+    <updated>2020-08-28T14:24:49.677Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;b&gt;
+    Azure RTOS</summary>
+        
+      
+    
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/categories/ThreadX/"/>
+    
+    
+    <category term="ThreadX" scheme="http://henji-guo.github.io/tags/ThreadX/"/>
+    
+    <category term="STM32" scheme="http://henji-guo.github.io/tags/STM32/"/>
+    
+  </entry>
+  
+</feed>
