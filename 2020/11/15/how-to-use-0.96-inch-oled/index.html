@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ThreadX(二) ------ 移植STM32[Keil], STM32">
+    <meta name="keywords" content="How to use u8g2, STM32">
     <meta name="description" content="henji&#39;s blog">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ThreadX(二) ------ 移植STM32[Keil] | henji</title>
+    <title>How to use u8g2 | henji</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -288,12 +288,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ThreadX(二) ------ 移植STM32[Keil]</h1>
+                    <h1 class="description center-align post-title">How to use u8g2</h1>
                 </div>
             </div>
         </div>
@@ -410,12 +410,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/ThreadX/">
-                                <span class="chip bg-color">ThreadX</span>
+                            <a href="/tags/ESP32/">
+                                <span class="chip bg-color">ESP32</span>
                             </a>
                         
-                            <a href="/tags/STM32/">
-                                <span class="chip bg-color">STM32</span>
+                            <a href="/tags/Arduino/">
+                                <span class="chip bg-color">Arduino</span>
                             </a>
                         
                     </div>
@@ -426,8 +426,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/ThreadX/" class="post-category">
-                                ThreadX
+                            <a href="/categories/ESP32/" class="post-category">
+                                ESP32
                             </a>
                         
                     </div>
@@ -439,7 +439,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-30
+                    2020-11-15
                 </div>
                 
 
@@ -455,113 +455,132 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="裸机项目（Keil）"><a href="#裸机项目（Keil）" class="headerlink" title="裸机项目（Keil）"></a>裸机项目（Keil）</h2><p>确保裸机项目没问题<br><img src="https://img-blog.csdnimg.cn/20200829095850105.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTU1MDAy,size_16,color_FFFFFF,t_70#pic_center"><br><img src="https://img-blog.csdnimg.cn/20200829095939757.png#pic_center"></p>
-<h2 id="移植ThreadX"><a href="#移植ThreadX" class="headerlink" title="移植ThreadX"></a>移植ThreadX</h2><ul>
-<li><p>添加头文件路径<br><img src="https://img-blog.csdnimg.cn/20200829103353583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTU1MDAy,size_16,color_FFFFFF,t_70#pic_center"></p>
-</li>
-<li><p>添加源码路径<br><img src="https://img-blog.csdnimg.cn/20200829103536216.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTU1MDAy,size_16,color_FFFFFF,t_70#pic_center"></p>
-</li>
-<li><p>修改编译（用armc6）<br><img src="https://img-blog.csdnimg.cn/20200829103901869.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTU1MDAy,size_16,color_FFFFFF,t_70#pic_center"><br>armc5 的话是没有这个的，会报一推错误<br><img src="https://img-blog.csdnimg.cn/20200829104012302.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTU1MDAy,size_16,color_FFFFFF,t_70#pic_center"></p>
-</li>
-<li><p>第一次编译</p>
-</li>
-</ul>
-<p>重复定义错误，注释掉 xxxx.it.c 里面对应的函数<br><img src="https://img-blog.csdnimg.cn/20200829104156750.png#pic_center"><br><img src="https://img-blog.csdnimg.cn/20200829104405247.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTU1MDAy,size_16,color_FFFFFF,t_70#pic_center"></p>
+                <h2 id="U8g2-Library"><a href="#U8g2-Library" class="headerlink" title="U8g2 Library"></a>U8g2 Library</h2><h3 id="1-Click-the-Manage-Libraries"><a href="#1-Click-the-Manage-Libraries" class="headerlink" title="1. Click the Manage Libraries"></a>1. Click the Manage Libraries</h3><p><img src="https://img-blog.csdnimg.cn/20201115223757864.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9oZW5qaS1ndW8uZ2l0aHViLmlv,size_16,color_bb2595,t_100#pic_center"></p>
+<h3 id="2-Installing-the-U8g2-Library"><a href="#2-Installing-the-U8g2-Library" class="headerlink" title="2. Installing the U8g2 Library"></a>2. Installing the U8g2 Library</h3><p><img src="https://img-blog.csdnimg.cn/2020111522404430.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9oZW5qaS1ndW8uZ2l0aHViLmlv,size_16,color_bb2595,t_100#pic_center"><br><img src="https://img-blog.csdnimg.cn/20201115224136969.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9oZW5qaS1ndW8uZ2l0aHViLmlv,size_16,color_bb2595,t_100#pic_center"></p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p><img src="https://img-blog.csdnimg.cn/20201115224418615.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9oZW5qaS1ndW8uZ2l0aHViLmlv,size_16,color_bb2595,t_100#pic_center"><br><img src="https://img-blog.csdnimg.cn/20201115224446233.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9oZW5qaS1ndW8uZ2l0aHViLmlv,size_16,color_bb2595,t_100#pic_center"></p>
 <ul>
-<li>第二次编译</li>
+<li>0.96 inch OLED can support two protocols which SPI and IIC*/</li>
+<li>Unfortunately , only support IIC that we have .</li>
 </ul>
-<p>七个错误一个一个来<br><img src="https://img-blog.csdnimg.cn/20200829104452486.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTU1MDAy,size_16,color_FFFFFF,t_70#pic_center"></p>
-<ol>
-<li>__RAM_segment_used_end__ = __initial_sp  初始化起始地址<br><img src="https://img-blog.csdnimg.cn/20200829104710420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTU1MDAy,size_16,color_FFFFFF,t_70#pic_center"></li>
-<li>把 _vectors 全部替换成 startup…….s 里面的  __Vectors<br><img src="https://img-blog.csdnimg.cn/20200829105100595.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTU1MDAy,size_16,color_FFFFFF,t_70#pic_center"><br><img src="https://img-blog.csdnimg.cn/20200829105151270.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTU1MDAy,size_16,color_FFFFFF,t_70#pic_center"></li>
-<li>注释 @<ul>
-<li>_tx_execution_isr_exit   </li>
-<li>_tx_execution_isr_entry</li>
-<li>_tx_execution_thread_enter</li>
-<li>_tx_execution_thread_exit<br><img src="https://img-blog.csdnimg.cn/20200829105316270.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTU1MDAy,size_16,color_FFFFFF,t_70#pic_center"><br><img src="https://img-blog.csdnimg.cn/20200829105428761.png#pic_center"><br><img src="https://img-blog.csdnimg.cn/20200829105509859.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTU1MDAy,size_16,color_FFFFFF,t_70#pic_center"></li>
-</ul>
-</li>
-</ol>
+<p><img src="https://img-blog.csdnimg.cn/20201115225347728.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9oZW5qaS1ndW8uZ2l0aHViLmlv,size_16,color_bb2595,t_100#pic_center"></p>
 <ul>
-<li>第三次编译</li>
+<li><p>Ctrl + F ,  input “ESP32” to find<br><img src="https://img-blog.csdnimg.cn/20201115225739540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9oZW5qaS1ndW8uZ2l0aHViLmlv,size_16,color_bb2595,t_100#pic_center"></p>
+</li>
+<li><p>remove comments ，modify PIN<br><img src="https://img-blog.csdnimg.cn/20201115230147575.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9oZW5qaS1ndW8uZ2l0aHViLmlv,size_16,color_bb2595,t_100#pic_center"></p>
+</li>
+<li><p>The most important<br><img src="https://img-blog.csdnimg.cn/20201115235245301.png#pic_center"></p>
+</li>
 </ul>
-<p>在main.c里面添加 “tx_api.h”<br>main()函数while(1)前添加     tx_kernel_enter( );</p>
-<p>实现函数 void tx_application_define(void *first_unused_memory)</p>
-<pre class="line-numbers language-c"><code class="language-c">    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-<span class="token comment" spellcheck="true">/* Private includes ----------------------------------------------------------*/</span>
-<span class="token comment" spellcheck="true">/* USER CODE BEGIN Includes */</span>
-<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">"tx_api.h"</span></span>
-<span class="token comment" spellcheck="true">/* USER CODE END Includes */</span>
+<h2 id="PIN"><a href="#PIN" class="headerlink" title="PIN"></a>PIN</h2><p><img src="https://img-blog.csdnimg.cn/20201115233436159.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9oZW5qaS1ndW8uZ2l0aHViLmlv,size_16,color_bb2595,t_100#pic_center"></p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><pre class="line-numbers language-c"><code class="language-c"><span class="token comment" spellcheck="true">/*
+  ==================================================================================
 
-<span class="token comment" spellcheck="true">/* Private variables ---------------------------------------------------------*/</span>
+  SPDX-License-Identifier: GPL-3.0-or-later
 
-<span class="token comment" spellcheck="true">/* USER CODE BEGIN PV */</span>
-TX_THREAD my_thread1<span class="token punctuation">;</span>
+  File_name : OLED.ino
+  Describe  : Using IIC to connect OLED
+  Author    : GHJ
+  Date      : 2020年11月16日 23:00:00
 
-TX_THREAD my_thread2<span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">/* USER CODE END PV */</span>
+  PS:
+     需要u8g2->u8g2库:https://github.com/olikraus/u8g2.git
+  Change Logs:
+  Date               Author          Notes
+  2020年11月15日       GHJ         the first version
 
-    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  ===================================================================================
+*/</span>
 
-  <span class="token comment" spellcheck="true">/* USER CODE BEGIN 2 */</span>
-    <span class="token function">HAL_UART_Transmit</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>huart1<span class="token punctuation">,</span><span class="token punctuation">(</span>uint8_t <span class="token operator">*</span><span class="token punctuation">)</span><span class="token string">"====ThreadX===="</span><span class="token punctuation">,</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token string">"====ThreadX===="</span><span class="token punctuation">)</span><span class="token punctuation">,</span>HAL_MAX_DELAY<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;Arduino.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;U8g2lib.h></span></span>
 
-    <span class="token function">tx_kernel_enter</span><span class="token punctuation">(</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">/* USER CODE END 2 */</span>
+<span class="token comment" spellcheck="true">/*0.96 inch OLED can support two protocols which SPI and IIC*/</span>
+<span class="token comment" spellcheck="true">/*Unfortunately , only support IIC that we have .*/</span>
+<span class="token macro property">#<span class="token directive keyword">define</span> U8X8_HAVE_HW_I2C</span>
+<span class="token macro property">#<span class="token directive keyword">ifdef</span> U8X8_HAVE_HW_SPI</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;SPI.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">endif</span></span>
+<span class="token macro property">#<span class="token directive keyword">ifdef</span> U8X8_HAVE_HW_I2C</span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;Wire.h></span></span>
+<span class="token macro property">#<span class="token directive keyword">endif</span></span>
 
-  <span class="token comment" spellcheck="true">/* Infinite loop */</span>
-  <span class="token comment" spellcheck="true">/* USER CODE BEGIN WHILE */</span>
-  <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
-  <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">/* USER CODE END WHILE */</span>
+<span class="token comment" spellcheck="true">/*
+  U8g2lib Example Overview:
+    Frame Buffer Examples: clearBuffer/sendBuffer. Fast, but may not work with all Arduino boards because of RAM consumption
+    Page Buffer Examples: firstPage/nextPage. Less RAM usage, should work with all Arduino boards.
+    U8x8 Text Only Example: No RAM usage, direct communication with display controller. No graphics, 8x8 Text only.
 
-    <span class="token comment" spellcheck="true">/* USER CODE BEGIN 3 */</span>
-  <span class="token punctuation">}</span>
-  <span class="token comment" spellcheck="true">/* USER CODE END 3 */</span>
+  This is a page buffer example.
+*/</span>
+
+<span class="token comment" spellcheck="true">/*       Interconnect
+
+   ESP32  &lt;--PIN-->   0.96 inch OLED
+   G22    &lt;------->   SCL
+   G21    &lt;------->   SDA
+   3.3V   &lt;------->   VCC
+   GND    &lt;------->   GND
+
+*/</span>
+<span class="token comment" spellcheck="true">/* the most important that using all buffer */</span> 
+U8G2_SSD1306_128X64_NONAME_F_HW_I2C <span class="token function">u8g2</span><span class="token punctuation">(</span>U8G2_R0<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">/* reset=*/</span> U8X8_PIN_NONE<span class="token punctuation">,</span> <span class="token comment" spellcheck="true">/* clock=*/</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">/* data=*/</span> <span class="token number">21</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// ESP32 Thing, HW I2C with pin remapping</span>
+
+
+<span class="token keyword">void</span> <span class="token function">setup</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token comment" spellcheck="true">/* Using u8g2 */</span>
+  u8g2<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/* Allow u8g2 print UTF-8 front */</span>
+  u8g2<span class="token punctuation">.</span><span class="token function">enableUTF8Print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
+<span class="token keyword">void</span> <span class="token function">loop</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
-<span class="token comment" spellcheck="true">/* USER CODE BEGIN 4 */</span>
+  u8g2<span class="token punctuation">.</span><span class="token function">clearBuffer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//clear screen</span>
 
+  <span class="token comment" spellcheck="true">/*
+          length 128 (0-127)
+            **************
+    width   *            *
+    64(0-63) *            *
+            **************
+  */</span>
 
-<span class="token keyword">void</span> <span class="token function">my_thread1_entry</span><span class="token punctuation">(</span>ULONG thread_input<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-  <span class="token comment" spellcheck="true">/* Enter into a forever loop. */</span>
-  <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
-  <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">/* Set the x y coordinates */</span>
+  u8g2<span class="token punctuation">.</span><span class="token function">setCursor</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/* Set Font that Chinese or alphabet or icon  */</span>
+  <span class="token comment" spellcheck="true">/* find it https://github.com/olikraus/u8g2/wiki/fntgrptulamide */</span>
+  u8g2<span class="token punctuation">.</span><span class="token function">setFont</span><span class="token punctuation">(</span>u8g2_font_wqy13_t_gb2312<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/* Output fonts in the font database which you set */</span>
+  u8g2<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"Hello world !"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/*You can only display it if you send it.*/</span>
+  u8g2<span class="token punctuation">.</span><span class="token function">sendBuffer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        <span class="token function">HAL_UART_Transmit</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>huart1<span class="token punctuation">,</span><span class="token punctuation">(</span>uint8_t <span class="token operator">*</span><span class="token punctuation">)</span><span class="token string">"threadx 1 ..."</span><span class="token punctuation">,</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token string">"threadx 1 ..."</span><span class="token punctuation">)</span><span class="token punctuation">,</span>HAL_MAX_DELAY<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">delay</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token function">tx_thread_sleep</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">/* ======================for instance======================== */</span>
+  u8g2<span class="token punctuation">.</span><span class="token function">clearBuffer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//clear screen</span>
+  u8g2<span class="token punctuation">.</span><span class="token function">setFont</span><span class="token punctuation">(</span>u8g2_font_open_iconic_embedded_2x_t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  u8g2<span class="token punctuation">.</span><span class="token function">drawGlyph</span><span class="token punctuation">(</span><span class="token number">111</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">,</span> <span class="token number">64</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//显示电池</span>
+  u8g2<span class="token punctuation">.</span><span class="token function">drawGlyph</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//显示WIFI</span>
+  u8g2<span class="token punctuation">.</span><span class="token function">setFont</span><span class="token punctuation">(</span>u8g2_font_open_iconic_weather_4x_t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  u8g2<span class="token punctuation">.</span><span class="token function">drawGlyph</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">69</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  u8g2<span class="token punctuation">.</span><span class="token function">setFont</span><span class="token punctuation">(</span>u8g2_font_logisoso20_tf<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  u8g2<span class="token punctuation">.</span><span class="token function">setCursor</span><span class="token punctuation">(</span><span class="token number">48</span> <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">48</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">//float temp = bmp.readTemperature();</span>
+  <span class="token keyword">float</span> temp <span class="token operator">=</span> <span class="token number">20.5</span><span class="token punctuation">;</span>
+  u8g2<span class="token punctuation">.</span><span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%.1f"</span><span class="token punctuation">,</span> temp<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  u8g2<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"°C"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment" spellcheck="true">/*You can only display it if you send it.*/</span>
+  u8g2<span class="token punctuation">.</span><span class="token function">sendBuffer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/* ======================for instance======================== */</span>
+
+  <span class="token function">delay</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span class="token keyword">void</span> <span class="token function">my_thread2_entry</span><span class="token punctuation">(</span>ULONG thread_input<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-  <span class="token comment" spellcheck="true">/* Enter into a forever loop. */</span>
-  <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
-  <span class="token punctuation">{</span>
 
-        <span class="token function">HAL_UART_Transmit</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>huart1<span class="token punctuation">,</span><span class="token punctuation">(</span>uint8_t <span class="token operator">*</span><span class="token punctuation">)</span><span class="token string">"threadx 2 ..."</span><span class="token punctuation">,</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token string">"threadx 2 ..."</span><span class="token punctuation">)</span><span class="token punctuation">,</span>HAL_MAX_DELAY<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token function">tx_thread_sleep</span><span class="token punctuation">(</span><span class="token number">300</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">void</span> <span class="token function">tx_application_define</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span>first_unused_memory<span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-  <span class="token comment" spellcheck="true">/* Create my_thread! */</span>
-  <span class="token function">tx_thread_create</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>my_thread1<span class="token punctuation">,</span> <span class="token string">"My Thread 1"</span><span class="token punctuation">,</span>
-  my_thread1_entry<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> first_unused_memory<span class="token punctuation">,</span> <span class="token number">1024</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> TX_NO_TIME_SLICE<span class="token punctuation">,</span> TX_AUTO_START<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token function">tx_thread_create</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>my_thread2<span class="token punctuation">,</span> <span class="token string">"My Thread 2"</span><span class="token punctuation">,</span>
-  my_thread2_entry<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> first_unused_memory<span class="token operator">+</span><span class="token number">1024</span><span class="token punctuation">,</span> <span class="token number">1024</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> TX_NO_TIME_SLICE<span class="token punctuation">,</span> TX_AUTO_START<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200829110804576.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3NTU1MDAy,size_16,color_FFFFFF,t_70#pic_center"></p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>Done.</p>
 
             </div>
             <hr/>
@@ -587,7 +606,7 @@ TX_THREAD my_thread2<span class="token punctuation">;</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://henji-guo.github.io/2020/08/30/threadx-er-yi-zhi-dao-stm32-keil/">http://henji-guo.github.io/2020/08/30/threadx-er-yi-zhi-dao-stm32-keil/</a>
+                    <a href="http://henji-guo.github.io/2020/11/15/how-to-use-0.96-inch-oled/">http://henji-guo.github.io/2020/11/15/how-to-use-0.96-inch-oled/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -625,12 +644,12 @@ TX_THREAD my_thread2<span class="token punctuation">;</span>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/ThreadX/">
-                                    <span class="chip bg-color">ThreadX</span>
+                                <a href="/tags/ESP32/">
+                                    <span class="chip bg-color">ESP32</span>
                                 </a>
                             
-                                <a href="/tags/STM32/">
-                                    <span class="chip bg-color">STM32</span>
+                                <a href="/tags/Arduino/">
+                                    <span class="chip bg-color">Arduino</span>
                                 </a>
                             
                         </div>
@@ -1065,19 +1084,19 @@ TX_THREAD my_thread2<span class="token punctuation">;</span>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/15/how-to-use-0.96-inch-oled/">
+                <a href="/2020/11/15/how-to-use-bme280/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="How to use u8g2">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="How to use BME280">
                         
-                        <span class="card-title">How to use u8g2</span>
+                        <span class="card-title">How to use BME280</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Using 0.96 OLED
+                            Using BME280 to read temperature , humidity and airpressure
                         
                     </div>
                     <div class="publish-info">
@@ -1118,24 +1137,24 @@ TX_THREAD my_thread2<span class="token punctuation">;</span>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/28/threadx-shi-ding-shi-qi-time/">
+                <a href="/2020/08/30/threadx-er-yi-zhi-dao-stm32-keil/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="ThreadX(十)---定时器TIME">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="ThreadX(二) ------ 移植STM32[Keil]">
                         
-                        <span class="card-title">ThreadX(十)---定时器TIME</span>
+                        <span class="card-title">ThreadX(二) ------ 移植STM32[Keil]</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ThreadX(十)------定时器TIME
+                            ThreadX(二) ------ 移植STM32[Keil]
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-30
                             </span>
                         <span class="publish-author">
                             
