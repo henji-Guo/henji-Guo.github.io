@@ -6,7 +6,7 @@
   <link href="http://henji-guo.github.io/atom.xml" rel="self"/>
   
   <link href="http://henji-guo.github.io/"/>
-  <updated>2020-11-15T01:15:52.788Z</updated>
+  <updated>2020-11-15T15:58:57.776Z</updated>
   <id>http://henji-guo.github.io/</id>
   
   <author>
@@ -17,18 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>How to use BME280</title>
-    <link href="http://henji-guo.github.io/2020/11/15/how-to-use-bme280/"/>
-    <id>http://henji-guo.github.io/2020/11/15/how-to-use-bme280/</id>
+    <title>How to use u8g2</title>
+    <link href="http://henji-guo.github.io/2020/11/15/how-to-use-0.96-inch-oled/"/>
+    <id>http://henji-guo.github.io/2020/11/15/how-to-use-0.96-inch-oled/</id>
     <published>2020-11-14T16:07:36.000Z</published>
-    <updated>2020-11-15T01:15:52.788Z</updated>
+    <updated>2020-11-15T15:58:57.776Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;BME280-Library&quot;&gt;&lt;a href=&quot;#BME280-Library&quot; class=&quot;headerlink&quot; title=&quot;BME280 Library&quot;&gt;&lt;/a&gt;BME280 Library&lt;/h2&gt;&lt;h3</summary>
+    <summary type="html">&lt;h2 id=&quot;U8g2-Library&quot;&gt;&lt;a href=&quot;#U8g2-Library&quot; class=&quot;headerlink&quot; title=&quot;U8g2 Library&quot;&gt;&lt;/a&gt;U8g2 Library&lt;/h2&gt;&lt;h3</summary>
         
       
     
@@ -44,18 +44,18 @@
   </entry>
   
   <entry>
-    <title>How to use u8g2</title>
-    <link href="http://henji-guo.github.io/2020/11/15/how-to-use-0.96-inch-oled/"/>
-    <id>http://henji-guo.github.io/2020/11/15/how-to-use-0.96-inch-oled/</id>
+    <title>How to use BME280</title>
+    <link href="http://henji-guo.github.io/2020/11/15/how-to-use-bme280/"/>
+    <id>http://henji-guo.github.io/2020/11/15/how-to-use-bme280/</id>
     <published>2020-11-14T16:07:36.000Z</published>
-    <updated>2020-11-15T15:58:57.776Z</updated>
+    <updated>2020-11-15T01:15:52.788Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;U8g2-Library&quot;&gt;&lt;a href=&quot;#U8g2-Library&quot; class=&quot;headerlink&quot; title=&quot;U8g2 Library&quot;&gt;&lt;/a&gt;U8g2 Library&lt;/h2&gt;&lt;h3</summary>
+    <summary type="html">&lt;h2 id=&quot;BME280-Library&quot;&gt;&lt;a href=&quot;#BME280-Library&quot; class=&quot;headerlink&quot; title=&quot;BME280 Library&quot;&gt;&lt;/a&gt;BME280 Library&lt;/h2&gt;&lt;h3</summary>
         
       
     
